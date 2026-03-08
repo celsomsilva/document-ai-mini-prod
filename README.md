@@ -4,7 +4,7 @@ A minimal **Document AI pipeline** demonstrating how to move from raw documents 
 
 This project focuses on the engineering side of AI systems: reproducibility, packaging, testing, and deployment.
 
-This repository is derived from the [mlops-mini-prod project](https://github.com/mlops-mini-prod), adapting its minimal production structure to a Document AI pipeline.
+This repository is derived from the [mlops-mini-prod project](https://github.com/celsomsilva/mlops-mini-prod), adapting its minimal production structure to a Document AI pipeline.
 
 ---
 

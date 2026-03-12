@@ -10,11 +10,9 @@ This repository is derived from the [mlops-production-pipeline project](https://
 
 ## Live demo
 
-https://document-ai-pipeline.onrender.com
+[Project Home](https://document-ai-mini-prod.onrender.com)
 
-Documentation and Execution:
-
-https://document-ai-pipeline.onrender.com/docs
+[Documentation and Execution](https://document-ai-mini-prod.onrender.com/docs)
 
 ---
 

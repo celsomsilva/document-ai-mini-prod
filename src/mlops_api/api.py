@@ -2,7 +2,7 @@
 FastAPI application.
 
 Exposes health check and prediction endpoints for a Document AI MVP.
-Keeps the same endpoint names as the original mlops-mini-prod.
+Keeps the same endpoint names as the original mlops-production-pipeline.
 """
 
 from fastapi import FastAPI, HTTPException

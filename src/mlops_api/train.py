@@ -2,7 +2,7 @@
 Offline indexing script.
 
 Creates a lightweight document index and saves artifacts to models/.
-This keeps the same lifecycle pattern as the original mlops-mini-prod:
+This keeps the same lifecycle pattern as the original mlops-production-pipeline:
 offline step -> saved artifacts -> API loads artifacts -> inference.
 
 Artifacts:

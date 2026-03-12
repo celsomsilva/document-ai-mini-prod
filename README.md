@@ -1,20 +1,20 @@
-# document-ai-mini-prod
+# document-ai-pipeline
 
 A minimal **Document AI pipeline** demonstrating how to move from raw documents to a production-ready API that answers questions with **grounded citations**.
 
 This project focuses on the engineering side of AI systems: reproducibility, packaging, testing, and deployment.
 
-This repository is derived from the [mlops-mini-prod project](https://github.com/celsomsilva/mlops-mini-prod), adapting its minimal production structure to a Document AI pipeline.
+This repository is derived from the [mlops-production-pipeline project](https://github.com/celsomsilva/mlops-production-pipeline), adapting its minimal production structure to a Document AI pipeline.
 
 ---
 
 ## Live demo
 
-https://document-ai-mini-prod.onrender.com
+https://document-ai-pipeline.onrender.com
 
 Documentation and Execution:
 
-https://document-ai-mini-prod.onrender.com/docs
+https://document-ai-pipeline.onrender.com/docs
 
 ---
 
@@ -48,7 +48,7 @@ The system returns **traceable answers** instead of hallucinated text.
 ## Project structure
 
 ```
-document-ai-mini-prod/
+document-ai-pipeline/
 src/
   mlops_api/
     __init__.py
@@ -241,4 +241,4 @@ This project was developed by an engineer and data scientist with a background i
 ## Contact
 
 * [LinkedIn](https://linkedin.com/in/celso-m-silva)
-* Or open an [issue](https://github.com/celsomsilva/document-ai-mini-prod/issues)
+* Or open an [issue](https://github.com/celsomsilva/document-ai-pipeline/issues)

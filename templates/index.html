@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Document AI Question Answering</h1>
+
+        <p>Ask a question about indexed documents.</p>
+        
+        <div class="examples">
+
+	<p><strong>Example questions:</strong></p>
+
+	<ul>
+	<li onclick="setQuestion('What is the deductible?')">
+	What is the deductible?
+	</li>
+
+	<li onclick="setQuestion('What is the policy number?')">
+	What is the policy number?
+	</li>
+
+	<li onclick="setQuestion('What coverage does endorsement A1 add?')">
+	What coverage does endorsement A1 add?
+	</li>
+
+	<li onclick="setQuestion('Is flood covered?')">
+	Is flood covered?
+	</li>
+
+	</ul>
+
+	</div>
+
+        <input id="question" placeholder="What is the deductible?" size="60">
+
+        <br><br>
+
+        <button onclick="ask()">Ask</button>
+        
+        <br><br><br>
+
+        <div id="answer"></div>
+
+        <h3>Sources</h3>
+
+        <pre id="sources"></pre>
+
+        <a href="/docs">Developer API documentation</a>
+
+    </div>
+
+    <script>
+
+        async function ask() {
+
+            const button = document.querySelector("button")
+
+            button.disabled = true
+            button.innerText = "Searching..."
+
+            const question = document.getElementById("question").value
+
+            const response = await fetch("/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: question
+                })
+            })
+
+            const data = await response.json()
+
+            document.getElementById("answer").innerText =
+                data.prediction
+
+            let sources = ""
+
+            for (const c of data.citations) {
+                sources += `${c.doc_id} – page ${c.page}\n`
+            }
+
+            document.getElementById("sources").innerText = sources
+
+            button.disabled = false
+            button.innerText = "Ask"
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -10,9 +10,9 @@ This repository is derived from the [mlops-production-pipeline project](https://
 
 ## Live demo
 
-[Project Home](https://document-ai-mini-prod.onrender.com)
+[User-facing demo](https://document-ai-mini-prod.onrender.com)
 
-[Documentation and Execution](https://document-ai-mini-prod.onrender.com/docs)
+[Developer API docs](https://document-ai-mini-prod.onrender.com/docs)
 
 ---
 
@@ -53,6 +53,12 @@ src/
     api.py              # FastAPI application (/health, /predict)
     train.py            # indexing script that builds document artifacts
     predict.py          # retrieval + answer generation logic
+    
+templates/
+   index.html		# home page
+
+static/
+   style.css		# css file
 
 models/                 # saved artifacts (index.json + metadata.json)
 
